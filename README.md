@@ -3,6 +3,13 @@
 ## How to use it as a module
 
 ```hcl
+module "nsg" {
+  source  = "foss-cafe/nsg/azurerm"
+  version = "1.0.1"
+  name                = "terraform-test-nsg"
+  location            = "East US"
+  resource_group_name = "terraform-test"
+}
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
