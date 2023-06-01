@@ -35,7 +35,7 @@ resource "azurerm_network_security_rule" "this" {
 
   name                                       = each.key
   resource_group_name                        = var.resource_group_name
-  network_security_group_name                = azurerm_network_security_group.this[0].id
+  network_security_group_name                = azurerm_network_security_group.this[0].name
   description                                = try(each.value.description, null)
   protocol                                   = each.value.protocol
   source_port_range                          = try(each.value.source_port_range, null)
